@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-100 font-sans">
+    <div class="flex h-screen">
+        <!-- Sidebar -->
+        <aside class="w-64 bg-gradient-to-b from-blue-600 to-blue-800 text-white shadow-md hidden md:block">
+            <div class="p-4 border-b border-blue-500">
+            <h1 class="text-xl font-bold">Dashboard</h1>
+            </div>
+            <nav class="mt-4">
+            <ul class="space-y-2">
+                <li class="p-4 hover:bg-blue-700 rounded-lg transition" onclick="window.location.href='main.html'">
+                <a href="main.html" class="flex items-center space-x-3">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 10h11M9 21V3m0 0L3 10m6-7l6 7" />
+                    </svg>
+                    <span>Home</span>
+                </a>
+                </li>
+                <li class="p-4 hover:bg-blue-700 rounded-lg transition" onclick="window.location.href='analytics.html'">
+                    <a href="analytics.html" class="flex items-center space-x-3">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M11 19a4 4 0 100-8 4 4 0 000 8zm0 0v5m0-5H6m5 0h5" />
+                        </svg>
+                        <span>Analytics</span>
+                    </a>
+                </li>
+                <li class="p-4 hover:bg-blue-700 rounded-lg transition" onclick="window.location.href='settings.html'">
+                <a href="settings.html" class="flex items-center space-x-3">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8c1.657 0 3-1.343 3-3S13.657 2 12 2 9 3.343 9 5s1.343 3 3 3zm0 0v13m0-13H9m3 0h3" />
+                    </svg>
+                    <span>Settings</span>
+                </a>
+                </li>
+                <li class="p-4 hover:bg-blue-700 rounded-lg transition" onclick="window.location.href='profile.html'">
+                <a href="profile.html" class="flex items-center space-x-3">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5.121 17.804A4.992 4.992 0 0112 15c1.657 0 3.156.672 4.121 1.804M15 10a3 3 0 11-6 0 3 3 0 016 0z" />
+                    </svg>
+                    <span>Profile</span>
+                </a>
+                </li>
+            </ul>
+            </nav>
+        </aside>
+
+        <!-- Main Content -->
+        <div class="flex-1 flex flex-col">
+            <!-- Header -->
+            <header class="bg-blue-700 shadow-md p-4 flex justify-evenly items-center">
+                <img src="SRC/logo.png" alt="" class="h-10 w-10 rounded-full">
+                <h1 class="text-lg text-center w-full font-semi-bold text-white">FITS Tanza - Municipal Agriculture Office</h1>
+                <button class="md:hidden text-white" id="menu-toggle">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7" />
+                    </svg>
+                </button>
+            </header>
+
+            <!-- Content -->
+            <main class="p-6 flex-1 overflow-y-auto">
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                    <div class="bg-white p-4 rounded-lg shadow-md">
+                        <h3 class="text-lg font-semibold text-gray-800">Card 1</h3>
+                        <p class="text-gray-600 mt-2">Some content here.</p>
+                    </div>
+                    <div class="bg-white p-4 rounded-lg shadow-md">
+                        <h3 class="text-lg font-semibold text-gray-800">Card 2</h3>
+                        <p class="text-gray-600 mt-2">Some content here.</p>
+                    </div>
+                    <div class="bg-white p-4 rounded-lg shadow-md">
+                        <h3 class="text-lg font-semibold text-gray-800">Card 3</h3>
+                        <p class="text-gray-600 mt-2">Some content here.</p>
+                    </div>
+                </div>
+            </main>
+        </div>
+    </div>
+
+<!-- Mobile Sidebar -->
+<aside class="fixed inset-y-0 left-0 bg-gradient-to-b from-blue-600 to-blue-800 text-white shadow-lg w-64 z-50 transform -translate-x-full transition-transform" id="mobile-menu">
+    <div class="p-4 border-b border-blue-500">
+        <h1 class="text-2xl font-bold">Dashboard</h1>
+    </div>
+    <nav class="mt-6">
+        <ul class="space-y-2">
+            <li class="p-4 hover:bg-blue-700 rounded-lg transition" onclick="window.location.href='main.html'">
+                <a href="main.html" class="flex items-center space-x-3">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 10h11M9 21V3m0 0L3 10m6-7l6 7" />
+                    </svg>
+                    <span>Home</span>
+                </a>
+            </li>
+            <li class="p-4 hover:bg-blue-700 rounded-lg transition" onclick="window.location.href='analytics.html'">
+                <a href="analytics.html" class="flex items-center space-x-3">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M11 19a4 4 0 100-8 4 4 0 000 8zm0 0v5m0-5H6m5 0h5" />
+                    </svg>
+                    <span>Analytics</span>
+                </a>
+            </li>
+            <li class="p-4 hover:bg-blue-700 rounded-lg transition" onclick="window.location.href='settings.html'">
+                <a href="settings.html" class="flex items-center space-x-3">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8c1.657 0 3-1.343 3-3S13.657 2 12 2 9 3.343 9 5s1.343 3 3 3zm0 0v13m0-13H9m3 0h3" />
+                    </svg>
+                    <span>Settings</span>
+                </a>
+            </li>
+            <li class="p-4 hover:bg-blue-700 rounded-lg transition" onclick="window.location.href='profile.html'">
+                <a href="profile.html" class="flex items-center space-x-3">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5.121 17.804A4.992 4.992 0 0112 15c1.657 0 3.156.672 4.121 1.804M15 10a3 3 0 11-6 0 3 3 0 016 0z" />
+                    </svg>
+                    <span>Profile</span>
+                </a>
+            </li>
+        </ul>
+    </nav>
+</aside>
+
+    <script>
+        const menuToggle = document.getElementById('menu-toggle');
+        const mobileMenu = document.getElementById('mobile-menu');
+        const mobileMenuOverlay = document.getElementById('mobile-menu-overlay');
+
+        menuToggle.addEventListener('click', () => {
+            mobileMenu.classList.toggle('-translate-x-full');
+            mobileMenuOverlay.classList.toggle('hidden');
+        });
+
+        mobileMenuOverlay.addEventListener('click', () => {
+            mobileMenu.classList.add('-translate-x-full');
+            mobileMenuOverlay.classList.add('hidden');
+        });
+    </script>
+</body>
+</html></div></body>
