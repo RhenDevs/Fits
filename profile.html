@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Profile</title>
     <script src="https://cdn.tailwindcss.com"></script>
+    <script src="menu.js" defer></script>
 </head>
 <body class="bg-gray-100 font-sans">
     <div class="flex h-screen">
@@ -137,21 +138,5 @@
         </nav>
     </aside>
     
-
-    <script>
-        const menuToggle = document.getElementById('menu-toggle');
-        const mobileMenu = document.getElementById('mobile-menu');
-        const mobileMenuOverlay = document.getElementById('mobile-menu-overlay');
-
-        menuToggle.addEventListener('click', () => {
-            mobileMenu.classList.toggle('-translate-x-full');
-            mobileMenuOverlay.classList.toggle('hidden');
-        });
-
-        mobileMenuOverlay.addEventListener('click', () => {
-            mobileMenu.classList.add('-translate-x-full');
-            mobileMenuOverlay.classList.add('hidden');
-        });
-    </script>
 </body>
-</html></div></body>
+</html>
