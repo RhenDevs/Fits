@@ -9,12 +9,13 @@ new Chart(userStatsCtx, {
         labels: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun'],
         datasets: [{
             label: 'Active Users',
-            data: [50, 100, 150, 200, 250, 300],
+            data: [140, 555, 32, 43, 643, 876],
             borderColor: 'rgba(54, 162, 235, 1)',
             backgroundColor: 'rgba(54, 162, 235, 0.2)',
             borderWidth: 2
         }]
     },
+    
     options: {
         responsive: true,
         plugins: {
@@ -26,11 +27,11 @@ new Chart(userStatsCtx, {
 });
 
 new Chart(trafficSourcesCtx, {
-    type: 'doughnut',
+    type: 'pie',
     data: {
         labels: ['Organic', 'Direct', 'Referral', 'Social'],
         datasets: [{
-            data: [40, 30, 20, 10],
+            data: [54, 76, 87, 76],
             backgroundColor: ['#4CAF50', '#FFC107', '#2196F3', '#FF5722']
         }]
     },
@@ -51,8 +52,8 @@ new Chart(performanceMetricsCtx, {
         datasets: [{
             label: 'Performance',
             data: [75, 50, 90, 60],
-            backgroundColor: 'rgba(255, 99, 132, 0.2)',
-            borderColor: 'rgba(255, 99, 132, 1)',
+            backgroundColor: 'rgba(2, 77, 27, 0.2)',
+            borderColor: 'rgb(33, 37, 77)',
             borderWidth: 1
         }]
     },
