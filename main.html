@@ -67,9 +67,40 @@
                     Join us in building a thriving agricultural sector for Tanza!
                 </p>
 
-                <div class="flex justify-center">
-                    <img src="SRC/rabies.jpg" alt="Rabies" class="w-1/2 h-auto object-fit rounded-sm shadow-md shadow-black mb-8">
+                <div class="relative w-80 max-w-2xl mx-auto mb-8">
+                    <div class="relative overflow-hidden rounded-sm shadow-md shadow-black">
+                        <div class="flex transition-transform duration-500 ease-in-out" id="simple-slider">
+                            <img src="SRC/rabies.jpg" alt="Rabies" class="w-full h-auto object-cover">
+                            <img src="SRC/1.jpg" alt="Image 1" class="w-full h-auto object-cover">
+                            <img src="SRC/3.jpg" alt="Image 2" class="w-full h-auto object-cover">
+                            <img src="SRC/4.jpg" alt="Image 3" class="w-full h-auto object-cover">
+                        </div>
+                    </div>
+                    <div class="flex justify-between mt-4">
+                        <button class="px-4 py-2 bg-blue-600 text-white rounded" onclick="prevSlide()">Previous</button>
+                        <button class="px-4 py-2 bg-blue-600 text-white rounded" onclick="nextSlide()">Next</button>
+                    </div>
                 </div>
+
+                <script>
+                    let currentSlide = 0;
+                    const simpleSlider = document.getElementById('simple-slider');
+                    const totalSimpleSlides = simpleSlider.children.length;
+
+                    function updateSlider() {
+                        simpleSlider.style.transform = `translateX(-${currentSlide * 100}%)`;
+                    }
+
+                    function prevSlide() {
+                        currentSlide = (currentSlide - 1 + totalSimpleSlides) % totalSimpleSlides;
+                        updateSlider();
+                    }
+
+                    function nextSlide() {
+                        currentSlide = (currentSlide + 1) % totalSimpleSlides;
+                        updateSlider();
+                    }
+                </script>
                 <div>
                     <h1 class="p-6 font-bold text-2xl">Mission</h1>
                     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto voluptatibus eum eius, necessitatibus itaque explicabo quae odit fugiat porro fuga iste assumenda a atque quidem enim rem facilis inventore nam.</p>
@@ -85,7 +116,7 @@
                     </div>
                     <div class="bg-white p-4 rounded-lg shadow-md">
                         <h3 class="text-lg font-bold text-gray-800 text-center p-4">Labor Day</h3>
-                        <img src="SRC/3.jpg" alt="">
+                        <img src="SRC/3.jpg" alt="" >
                         <p class="text-gray-600 mt-2 text-center">Some content here.</p>
                     </div>
                     <div class="bg-white p-4 rounded-lg shadow-md">
