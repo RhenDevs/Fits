@@ -41,6 +41,31 @@
                     <span>Profile</span>
                 </a>
                 </li>
+                <li>
+                    <!-- Floating Circle for Messaging -->
+                    <div class="fixed bottom-4 right-4 group">
+                        <button class="bg-blue-600 text-white rounded-full h-16 w-16 shadow-lg flex items-center justify-center hover:bg-blue-700 transition relative mr-8 mb-8" onclick="toggleMessagingSection()">
+                            <i class="fas fa-envelope text-2xl"></i>
+                        </button>
+                        <span class="absolute bottom-full mb-2 right-1/2 transform translate-y-1/8 bg-gray-800 text-white text-sm rounded px-4 py-2 opacity-0 group-hover:opacity-100 transition">
+                            Message
+                        </span>
+                    </div>
+
+                    <!-- Messaging Section -->
+                    <div id="messaging-section" class="fixed bottom-19 right-4 bg-gray-200 shadow-md rounded-lg w-80 p-4 hidden shadow-black">
+                        <h2 class="text-lg font-bold mb-2 text-black">Meseyg</h2>
+                        <textarea class="w-full border border-gray-300 rounded p-2 mb-2" rows="4" placeholder="Type your message..."></textarea>
+                        <button class="bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700 transition">Send</button>
+                    </div>
+
+                    <script>
+                        function toggleMessagingSection() {
+                            const messagingSection = document.getElementById('messaging-section');
+                            messagingSection.classList.toggle('hidden');
+                        }
+                    </script>
+                </li>
             </ul>
             </nav>
         </aside>
