@@ -48,15 +48,18 @@
         <!-- Main Content -->
         <div class="flex-1 flex flex-col">
             <!-- Header -->
-            <header class="bg-blue-700 shadow-md p-4 flex justify-evenly items-center">
-                <img src="SRC/logo.png" alt="" class="h-10 w-10 rounded-full">
-                <h1 class="text-lg text-center w-full font-semi-bold text-white">FITS Tanza - Municipal Agriculture Office</h1>
-                <div class="flex space-x-4 justify-between">
-                    <button class="bg-white text-blue-700  px-4 py-2 rounded-lg font-bold hover:bg-blue-100 transition  text-center" onclick="window.location.href='profile.html'">LogIn</button>
-                    <button class="bg-blue-500 text-white px-8 rounded-lg font-bold hover:bg-blue-600 transition text-center ">SignUp</button>
+            <header class="bg-blue-700 shadow-md p-4 flex justify-evenly md:justify-evenly items-center">
+                <div class="flex items-center space-x-1">
+                    <img src="SRC/logo.png" alt="" class="h-10 w-10 rounded-full">
+                    <h1 class="text-lg font-semibold text-white text-center ">FITS Tanza - Municipal Agriculture Office</h1>
                 </div>
-                <button class="md:hidden text-white" id="menu-toggle">
-                    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <div class="flex justify-center items-center space-x-2 mr-2 mt-2 md:mt-0 sm:justify-center sm:items-center ">
+                    <button class="bg-white text-blue-700 px-4 py-2 rounded-lg font-bold hover:bg-blue-100 transition text-sm md:text-center md:text-m md:justify-center sm:items-center" onclick="window.location.href='profile.html'">LogIn</button>
+                    <button class="bg-blue-500 text-white px-4 py-2 rounded-lg font-bold hover:bg-blue-600 transition text-sm md:text-md sm:items-center md:justify-center" onclick="window.location.href='signup.html'">SignUp</button>
+                    
+                </div>
+                <button class="md:hidden text-white mt-2 md:mt-0" id="menu-toggle">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24 " stroke="currentColor">
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7" />
                     </svg>
                 </button>
